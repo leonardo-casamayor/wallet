@@ -11,6 +11,12 @@
 		05E20C0127FB57CD00530224 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E20C0027FB57CD00530224 /* ContentView.swift */; };
 		05E20C0327FB57D100530224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0227FB57D100530224 /* Assets.xcassets */; };
 		05E20C0627FB57D100530224 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0527FB57D100530224 /* Preview Assets.xcassets */; };
+		05E20C0D27FB95D100530224 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0C27FB95D100530224 /* GoogleService-Info.plist */; };
+		05E20C1027FB988900530224 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 05E20C0F27FB988900530224 /* FirebaseAppCheck */; };
+		05E20C1227FB988900530224 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 05E20C1127FB988900530224 /* FirebaseAuth */; };
+		05E20C1427FB988900530224 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 05E20C1327FB988900530224 /* FirebaseAuthCombine-Community */; };
+		05E20C1627FB988900530224 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 05E20C1527FB988900530224 /* FirebaseCrashlytics */; };
+		05E20C1827FB988900530224 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 05E20C1727FB988900530224 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,7 @@
 		05E20C0027FB57CD00530224 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05E20C0227FB57D100530224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05E20C0527FB57D100530224 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05E20C0C27FB95D100530224 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E20C1827FB988900530224 /* FirebaseDatabase in Frameworks */,
+				05E20C1027FB988900530224 /* FirebaseAppCheck in Frameworks */,
+				05E20C1627FB988900530224 /* FirebaseCrashlytics in Frameworks */,
+				05E20C1427FB988900530224 /* FirebaseAuthCombine-Community in Frameworks */,
+				05E20C1227FB988900530224 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,7 @@
 			children = (
 				05E20BFE27FB57CD00530224 /* walletApp.swift */,
 				05E20C0027FB57CD00530224 /* ContentView.swift */,
+				05E20C0C27FB95D100530224 /* GoogleService-Info.plist */,
 				05E20C0227FB57D100530224 /* Assets.xcassets */,
 				05E20C0427FB57D100530224 /* Preview Content */,
 			);
@@ -83,6 +96,13 @@
 			dependencies = (
 			);
 			name = wallet;
+			packageProductDependencies = (
+				05E20C0F27FB988900530224 /* FirebaseAppCheck */,
+				05E20C1127FB988900530224 /* FirebaseAuth */,
+				05E20C1327FB988900530224 /* FirebaseAuthCombine-Community */,
+				05E20C1527FB988900530224 /* FirebaseCrashlytics */,
+				05E20C1727FB988900530224 /* FirebaseDatabase */,
+			);
 			productName = wallet;
 			productReference = 05E20BFB27FB57CD00530224 /* wallet.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 05E20BF227FB57CD00530224;
+			packageReferences = (
+				05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 05E20BFC27FB57CD00530224 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +150,7 @@
 			files = (
 				05E20C0627FB57D100530224 /* Preview Assets.xcassets in Resources */,
 				05E20C0327FB57D100530224 /* Assets.xcassets in Resources */,
+				05E20C0D27FB95D100530224 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +290,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -281,8 +306,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eldar.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eldar.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,9 +320,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,8 +336,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eldar.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eldar.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +367,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05E20C0F27FB988900530224 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		05E20C1127FB988900530224 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		05E20C1327FB988900530224 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		05E20C1527FB988900530224 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		05E20C1727FB988900530224 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E20C0E27FB988900530224 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05E20BF327FB57CD00530224 /* Project object */;
 }
