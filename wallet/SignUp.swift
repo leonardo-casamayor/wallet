@@ -13,7 +13,6 @@ struct SignUp: View {
         VStack(spacing: 100) {
             
                 EWTitle(title: "Create Account")
-                .padding(.top, 60)
             
             VStack() {
                 EWTextField(text: "", placeholder: "Name").padding(.bottom, 10)
