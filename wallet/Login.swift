@@ -18,9 +18,9 @@ struct Login: View {
                 .padding(.top, 20)
             
             VStack() {
-                //            EWTitle(title: "Welcome")
-                EWTextField(text: "")
-                EWSecureField(text: "")
+                
+                EWTextField(text: "", placeholder: "Email")
+                EWSecureField(text: "").padding(.top, 10)
                 EWButton(buttonText: "Log In") {
                     print("Hello")
                 }

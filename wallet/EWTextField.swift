@@ -10,9 +10,10 @@ import SwiftUI
 struct EWTextField: View {
     
     @State var text: String = ""
+    var placeholder: String = ""
     
     var body: some View {
-        TextField("Email",text: $text)
+        TextField(placeholder,text: $text)
             .padding()
             .background(Theme.textFieldBackground)
             .cornerRadius(8.0)
@@ -22,6 +23,6 @@ struct EWTextField: View {
 
 struct EWTextField_Previews: PreviewProvider {
     static var previews: some View {
-        EWTextField(text: "")
+        EWTextField(text: "", placeholder: "Email")
     }
 }

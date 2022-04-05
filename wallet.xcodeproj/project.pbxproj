@@ -15,6 +15,7 @@
 		052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDFB27FBE5B1005FEB5B /* EWButton.swift */; };
 		052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */; };
 		052FFE0027FBFD20005FEB5B /* EWTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */; };
+		052FFE0227FC742C005FEB5B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFE0127FC742C005FEB5B /* SignUp.swift */; };
 		05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E20BFE27FB57CD00530224 /* walletApp.swift */; };
 		05E20C0327FB57D100530224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0227FB57D100530224 /* Assets.xcassets */; };
 		05E20C0627FB57D100530224 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0527FB57D100530224 /* Preview Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		052FFDFB27FBE5B1005FEB5B /* EWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWButton.swift; sourceTree = "<group>"; };
 		052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTitle.swift; sourceTree = "<group>"; };
 		052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTextButton.swift; sourceTree = "<group>"; };
+		052FFE0127FC742C005FEB5B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		05E20BFB27FB57CD00530224 /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E20BFE27FB57CD00530224 /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		05E20C0227FB57D100530224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				052FFDFB27FBE5B1005FEB5B /* EWButton.swift */,
 				052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */,
 				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
+				052FFE0127FC742C005FEB5B /* SignUp.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */,
 				052FFE0027FBFD20005FEB5B /* EWTextButton.swift in Sources */,
 				052FFDF827FBDA4A005FEB5B /* Constants.swift in Sources */,
+				052FFE0227FC742C005FEB5B /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
