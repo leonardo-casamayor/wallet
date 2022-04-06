@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EWSecureField: View {
     
-    @State var text: String = ""
+    @Binding var text: String
     
     var body: some View {
         SecureField("Password",text: $text)
@@ -20,8 +20,8 @@ struct EWSecureField: View {
     }
 }
 
-struct EWSecureField_Previews: PreviewProvider {
-    static var previews: some View {
-        EWSecureField(text: "")
-    }
-}
+//struct EWSecureField_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EWSecureField(text: "")
+//    }
+//}

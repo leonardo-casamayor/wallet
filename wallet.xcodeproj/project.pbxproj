@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37027FE0B9B005F5746 /* SessionController.swift */; };
 		052FFDF027FBC95A005FEB5B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDEF27FBC95A005FEB5B /* Login.swift */; };
 		052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDF127FBCA9C005FEB5B /* EWTextField.swift */; };
 		052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDF327FBD2AE005FEB5B /* Theme.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0522F37027FE0B9B005F5746 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		052FFDEF27FBC95A005FEB5B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		052FFDF127FBCA9C005FEB5B /* EWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTextField.swift; sourceTree = "<group>"; };
 		052FFDF327FBD2AE005FEB5B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -60,6 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0522F36F27FE0A9D005F5746 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				052FFDEF27FBC95A005FEB5B /* Login.swift */,
+				052FFDF127FBCA9C005FEB5B /* EWTextField.swift */,
+				052FFDF527FBD6B5005FEB5B /* EWSecureField.swift */,
+				052FFDFB27FBE5B1005FEB5B /* EWButton.swift */,
+				052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */,
+				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
+				052FFE0127FC742C005FEB5B /* SignUp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		05E20BF227FB57CD00530224 = {
 			isa = PBXGroup;
 			children = (
@@ -83,15 +99,10 @@
 				05E20C0C27FB95D100530224 /* GoogleService-Info.plist */,
 				05E20C0227FB57D100530224 /* Assets.xcassets */,
 				05E20C0427FB57D100530224 /* Preview Content */,
-				052FFDEF27FBC95A005FEB5B /* Login.swift */,
-				052FFDF127FBCA9C005FEB5B /* EWTextField.swift */,
+				0522F36F27FE0A9D005F5746 /* Views */,
 				052FFDF327FBD2AE005FEB5B /* Theme.swift */,
-				052FFDF527FBD6B5005FEB5B /* EWSecureField.swift */,
 				052FFDF727FBDA4A005FEB5B /* Constants.swift */,
-				052FFDFB27FBE5B1005FEB5B /* EWButton.swift */,
-				052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */,
-				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
-				052FFE0127FC742C005FEB5B /* SignUp.swift */,
+				0522F37027FE0B9B005F5746 /* SessionController.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				052FFDF627FBD6B5005FEB5B /* EWSecureField.swift in Sources */,
+				0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */,
 				052FFDF027FBC95A005FEB5B /* Login.swift in Sources */,
 				052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */,
 				052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */,

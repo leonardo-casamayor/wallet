@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EWTextField: View {
     
-    @State var text: String = ""
+    @Binding var text: String
     var placeholder: String = ""
     
     var body: some View {
@@ -21,8 +21,8 @@ struct EWTextField: View {
     }
 }
 
-struct EWTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        EWTextField(text: "", placeholder: "Email")
-    }
-}
+//struct EWTextField_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EWTextField(text: "", placeholder: "Email")
+//    }
+//}
