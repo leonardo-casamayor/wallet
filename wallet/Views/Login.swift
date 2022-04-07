@@ -9,7 +9,10 @@ import SwiftUI
 
 struct Login: View {
     
+    var sessionController = firebaseController()
     @State private var selection: String? = nil
+    @State var email: String = ""
+    @State var pass: String = ""
     
     var body: some View {
         
@@ -23,8 +26,8 @@ struct Login: View {
             
             VStack() {
                 
-                EWTextField(text: "", placeholder: "Email")
-                EWSecureField(text: "").padding(.top, 10)
+                EWTextField(text: $email, placeholder: "Email")
+                EWSecureField(text: $pass).padding(.top, 10)
                 EWButton(buttonText: "Log In") {
                     print("Hello")
                 }
@@ -48,5 +51,20 @@ struct Login: View {
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
         Login()
+    }
+}
+
+extension Login {
+    
+    func signIn(){
+        sessionController.signIn(withEmail: self.email, andPassword: self.pass) { result, error in
+            //go to home
+            if let result = result, error == nil {
+                print("Mail: \(result.user.email!), passw: \(pass)")
+            }
+            else {
+                print("Error: \(String(describing: error))")
+            }
+        }
     }
 }
