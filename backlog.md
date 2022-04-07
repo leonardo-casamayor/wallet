@@ -3,6 +3,7 @@
 
 ## Release 1.0
 
+[EW-009] - Create tab bar - https://trello.com/c/3pEzBHEp/15-ew-007-create-tab-bar
 [EW-006] - Log in functionality - https://trello.com/c/tDWEHqoo/12-ew-006-log-in-functionality
 [EW-005] - Sign up functionality - https://trello.com/c/3sbBE910/11-ew-005-sign-up-functionality
 [EW-004] - Navigate to Sign up - https://trello.com/c/VEiE3XJc/9-ew-004-navigate-to-sign-up

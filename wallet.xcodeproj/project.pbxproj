@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37027FE0B9B005F5746 /* SessionController.swift */; };
+		0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37227FE6FB2005F5746 /* TabBar.swift */; };
 		052FFDF027FBC95A005FEB5B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDEF27FBC95A005FEB5B /* Login.swift */; };
 		052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDF127FBCA9C005FEB5B /* EWTextField.swift */; };
 		052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDF327FBD2AE005FEB5B /* Theme.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0522F37027FE0B9B005F5746 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		0522F37227FE6FB2005F5746 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		052FFDEF27FBC95A005FEB5B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		052FFDF127FBCA9C005FEB5B /* EWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTextField.swift; sourceTree = "<group>"; };
 		052FFDF327FBD2AE005FEB5B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */,
 				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
 				052FFE0127FC742C005FEB5B /* SignUp.swift */,
+				0522F37227FE6FB2005F5746 /* TabBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				052FFDF627FBD6B5005FEB5B /* EWSecureField.swift in Sources */,
 				0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */,
 				052FFDF027FBC95A005FEB5B /* Login.swift in Sources */,
+				0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */,
 				052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */,
 				052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */,
 				05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */,
