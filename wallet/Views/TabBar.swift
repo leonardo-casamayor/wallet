@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct TabBar: View {
+    
+    @Environment(\.managedObjectContext) var moc
+    var mail = ""
     var body: some View {
-        
+        NavigationView {
         TabView {
-            Text("Home Tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            Home(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
@@ -39,6 +41,8 @@ struct TabBar: View {
                     Text("NFC Pay")
                 }
         }
+        }.navigationTitle("Tab Bar")
+            .navigationBarHidden(true)
     }
 }
 

@@ -20,6 +20,7 @@
 		052FFE0227FC742C005FEB5B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFE0127FC742C005FEB5B /* SignUp.swift */; };
 		05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */; };
 		05A4431227FF27C800DB53F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431127FF27C800DB53F6 /* DataController.swift */; };
+		05A4431927FF6A0700DB53F6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431827FF6A0700DB53F6 /* Home.swift */; };
 		05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E20BFE27FB57CD00530224 /* walletApp.swift */; };
 		05E20C0327FB57D100530224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0227FB57D100530224 /* Assets.xcassets */; };
 		05E20C0627FB57D100530224 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0527FB57D100530224 /* Preview Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		052FFE0127FC742C005FEB5B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		05A4430F27FF268800DB53F6 /* wallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wallet.xcdatamodel; sourceTree = "<group>"; };
 		05A4431127FF27C800DB53F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		05A4431827FF6A0700DB53F6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		05E20BFB27FB57CD00530224 /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E20BFE27FB57CD00530224 /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		05E20C0227FB57D100530224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
 				052FFE0127FC742C005FEB5B /* SignUp.swift */,
 				0522F37227FE6FB2005F5746 /* TabBar.swift */,
+				05A4431827FF6A0700DB53F6 /* Home.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */,
 				052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */,
 				05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */,
+				05A4431927FF6A0700DB53F6 /* Home.swift in Sources */,
 				05A4431227FF27C800DB53F6 /* DataController.swift in Sources */,
 				052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */,
 				052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */,
@@ -354,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet/Preview Content\"";
@@ -370,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eldar.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edlar.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -384,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet/Preview Content\"";
@@ -400,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eldar.wallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edlar.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -12,31 +12,41 @@ struct SignUp: View {
     
     var sessionController = firebaseController()
     @Environment(\.managedObjectContext) var moc
+    @State private var selection: String? = nil
     @State var name: String = ""
     @State var lastName: String = ""
     @State var email: String = ""
     @State var pass: String = ""
+    @State var isLoggedIn: Bool = false
     
     var body: some View {
         
-        VStack(spacing: 100) {
+        NavigationView {
             
+            VStack(spacing: 100) {
+                
                 EWTitle(title: "Create Account")
-            
-            VStack() {
-                EWTextField(text: $name, placeholder: "Name").padding(.bottom, 10)
-                EWTextField(text: $lastName, placeholder: "Last Name").padding(.bottom, 10)
-                EWTextField(text: $email, placeholder: "Email").padding(.bottom, 10)
-                EWTextField(text: $pass, placeholder: "Password").padding(.bottom, 10)
-                EWButton(buttonText: "Sign Up") {
-                    createUser()
+                
+                VStack() {
+                    EWTextField(text: $name, placeholder: "Name").padding(.bottom, 10)
+                    EWTextField(text: $lastName, placeholder: "Last Name").padding(.bottom, 10)
+                    EWTextField(text: $email, placeholder: "Email").padding(.bottom, 10)
+                    EWTextField(text: $pass, placeholder: "Password").padding(.bottom, 10)
+                    
+                    NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){ EmptyView() }
+                    EWButton(buttonText: "Sign Up") {
+                                                    createUser()
+                        isLoggedIn = true
+                        selection = "Home"
+                    }
+                    .padding(.top, 30)
+                    Spacer()
                     
                 }
-                .padding(.top, 30)
-                Spacer()
-            }
-        }
-        }
+            }.navigationTitle("Sign Up")
+                .navigationBarHidden(true)
+        }.navigationBarBackButtonHidden(isLoggedIn)
+    }
 }
 
 struct SignUp_Previews: PreviewProvider {
