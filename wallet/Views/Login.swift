@@ -10,6 +10,9 @@ import SwiftUI
 struct Login: View {
     
     var sessionController = firebaseController()
+    
+    @Environment(\.managedObjectContext) var moc
+    @StateObject private var dataController = DataController()
     @State private var selection: String? = nil
     @State var email: String = ""
     @State var pass: String = ""
@@ -27,13 +30,13 @@ struct Login: View {
             VStack() {
                 
                 EWTextField(text: $email, placeholder: "Email")
-                EWSecureField(text: $pass).padding(.top, 10)
+                EWTextField(text: $pass, placeholder: "Password").padding(.top, 10)
                 EWButton(buttonText: "Log In") {
-                    print("Hello")
+                    signIn()
                 }
                 .padding(.top, 30)
                 
-                NavigationLink(destination: SignUp(), tag: "A", selection: $selection) {
+                NavigationLink(destination: SignUp().environment(\.managedObjectContext, dataController.container.viewContext), tag: "A", selection: $selection) {
                            
                 EWTextButton(buttonText: "Don't have an account yet? Sign up") {
                     print("Its working")

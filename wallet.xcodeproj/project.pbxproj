@@ -83,6 +83,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		05A4431727FF4ADF00DB53F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */,
+				05A4431127FF27C800DB53F6 /* DataController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		05E20BF227FB57CD00530224 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +119,7 @@
 				052FFDF327FBD2AE005FEB5B /* Theme.swift */,
 				052FFDF727FBDA4A005FEB5B /* Constants.swift */,
 				0522F37027FE0B9B005F5746 /* SessionController.swift */,
-				05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */,
-				05A4431127FF27C800DB53F6 /* DataController.swift */,
+				05A4431727FF4ADF00DB53F6 /* Model */,
 			);
 			path = wallet;
 			sourceTree = "<group>";

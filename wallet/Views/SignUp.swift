@@ -11,6 +11,7 @@ import FirebaseAuth
 struct SignUp: View {
     
     var sessionController = firebaseController()
+    @Environment(\.managedObjectContext) var moc
     @State var name: String = ""
     @State var lastName: String = ""
     @State var email: String = ""
@@ -29,6 +30,7 @@ struct SignUp: View {
                 EWTextField(text: $pass, placeholder: "Password").padding(.bottom, 10)
                 EWButton(buttonText: "Sign Up") {
                     createUser()
+                    
                 }
                 .padding(.top, 30)
                 Spacer()
@@ -45,16 +47,29 @@ struct SignUp_Previews: PreviewProvider {
 
 extension SignUp {
     
-    func createUser(){
+    func createUser() {
+        createFirebaseUser()
+        createDBUser()
+    }
+    
+    func createFirebaseUser(){
         sessionController.createUser(withEmail: self.email, andPassword: self.pass) { result, error in
-            //add user to db
-            //go to home
             if let result = result, error == nil {
-                print("Mail: \(result.user.email!), passw: \(pass)")
+                print("Firebase succesfully added user for mail: \(result.user.email!)")
             }
             else {
-                print("Error: \(String(describing: error))")
+                print("Firebase sign up error: \(String(describing: error))")
             }
         }
+    }
+    
+    func createDBUser() {
+        let user = User(context: moc)
+        user.id = UUID()
+        user.email = self.email
+        user.name = self.name
+        user.lastName = self.lastName
+        
+        try? moc.save()
     }
 }

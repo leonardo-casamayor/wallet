@@ -3,6 +3,8 @@
 
 ## Release 1.0
 
+[EW-011] - Save user in DB on sign up - https://trello.com/c/8mMT3LdC/18-ew-011-save-user-in-db-on-sign-up
+[EW-010] - DB setup - https://trello.com/c/YuPXftg5/17-ew-010-db-setup
 [EW-009] - Create tab bar - https://trello.com/c/3pEzBHEp/15-ew-007-create-tab-bar
 [EW-006] - Log in functionality - https://trello.com/c/tDWEHqoo/12-ew-006-log-in-functionality
 [EW-005] - Sign up functionality - https://trello.com/c/3sbBE910/11-ew-005-sign-up-functionality
