@@ -11,6 +11,8 @@ import Firebase
 @main
 struct walletApp: App {
     
+    @StateObject private var dataController = DataController()
+    
     init() {
         FirebaseApp.configure()
     }
@@ -18,6 +20,7 @@ struct walletApp: App {
     var body: some Scene {
         WindowGroup {
             Login()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

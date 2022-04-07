@@ -18,6 +18,8 @@
 		052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */; };
 		052FFE0027FBFD20005FEB5B /* EWTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */; };
 		052FFE0227FC742C005FEB5B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFE0127FC742C005FEB5B /* SignUp.swift */; };
+		05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */; };
+		05A4431227FF27C800DB53F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431127FF27C800DB53F6 /* DataController.swift */; };
 		05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E20BFE27FB57CD00530224 /* walletApp.swift */; };
 		05E20C0327FB57D100530224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0227FB57D100530224 /* Assets.xcassets */; };
 		05E20C0627FB57D100530224 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E20C0527FB57D100530224 /* Preview Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTitle.swift; sourceTree = "<group>"; };
 		052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTextButton.swift; sourceTree = "<group>"; };
 		052FFE0127FC742C005FEB5B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		05A4430F27FF268800DB53F6 /* wallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wallet.xcdatamodel; sourceTree = "<group>"; };
+		05A4431127FF27C800DB53F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		05E20BFB27FB57CD00530224 /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E20BFE27FB57CD00530224 /* walletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletApp.swift; sourceTree = "<group>"; };
 		05E20C0227FB57D100530224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				052FFDF327FBD2AE005FEB5B /* Theme.swift */,
 				052FFDF727FBDA4A005FEB5B /* Constants.swift */,
 				0522F37027FE0B9B005F5746 /* SessionController.swift */,
+				05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */,
+				05A4431127FF27C800DB53F6 /* DataController.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -206,9 +212,11 @@
 				052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */,
 				052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */,
 				05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */,
+				05A4431227FF27C800DB53F6 /* DataController.swift in Sources */,
 				052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */,
 				052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */,
 				052FFE0027FBFD20005FEB5B /* EWTextButton.swift in Sources */,
+				05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */,
 				052FFDF827FBDA4A005FEB5B /* Constants.swift in Sources */,
 				052FFE0227FC742C005FEB5B /* SignUp.swift in Sources */,
 			);
@@ -454,6 +462,19 @@
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05A4430F27FF268800DB53F6 /* wallet.xcdatamodel */,
+			);
+			currentVersion = 05A4430F27FF268800DB53F6 /* wallet.xcdatamodel */;
+			path = wallet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 05E20BF327FB57CD00530224 /* Project object */;
 }
