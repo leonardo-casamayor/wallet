@@ -3,6 +3,7 @@
 
 ## Release 1.0
 
+[EW-013] - Show cards in home - https://trello.com/c/VrynS3oe/26-ew-013-show-cards-in-home
 [EW-012] - Add card form - https://trello.com/c/T0ngUVto/22-ew-012-add-card-form
 [EW-007] - Load user name on home screen - https://trello.com/c/vdtjTDp3/13-ew-007-load-user-name-on-home-screen
 [EW-008] - Navigate to home - https://trello.com/c/9vEvLmd1/14-ew-008-navigate-to-home

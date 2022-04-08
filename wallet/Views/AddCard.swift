@@ -38,6 +38,7 @@ struct AddCard: View {
                         previousCards.append(newCard)
                         let cardData = try? JSONEncoder().encode(previousCards)
                         users[0].cards = Data(cardData!)
+                        try? moc.save()
                         number = ""
                         owner = ""
                         expirationDate = ""
