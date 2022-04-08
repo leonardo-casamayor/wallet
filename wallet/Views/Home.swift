@@ -15,15 +15,12 @@ struct Home: View {
         VStack {
             EWTitle(title: "Welcome \(users[0].name!)!")
             Text("Count: \(users.count)")
+            Text("Card count: \(decodeCards().count)")
             Text("Card number: \(decodeCards()[0].number)")
             Text("Card owner: \(decodeCards()[0].owner)")
             Text("Card expirationDate: \(decodeCards()[0].expirationDate)")
             Text("Card securityCode: \(decodeCards()[0].securityCode)")
-            Text("Card number: \(decodeCards()[1].number)")
-            Text("Card owner: \(decodeCards()[1].owner)")
-            Text("Card expirationDate: \(decodeCards()[1].expirationDate)")
-            Text("Card securityCode: \(decodeCards()[1].securityCode)")
-            Spacer()
+//            Spacer()
         }.navigationBarHidden(true)
         
     }

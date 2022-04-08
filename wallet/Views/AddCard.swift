@@ -11,7 +11,8 @@ struct AddCard: View {
    
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
-    @State private var showingAlert = false
+    @State private var showingSuccess = false
+    @State private var showingError = false
     @State var number: String = ""
     @State var owner: String = ""
     @State var expirationDate: String = ""
@@ -30,22 +31,31 @@ struct AddCard: View {
                     
 //                    NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){ EmptyView() }
                     EWButton(buttonText: "Add Card +") {
-                        var previousCards: [Card] = []
-                        if let userCards = users[0].cards {
-                            previousCards = try! JSONDecoder().decode([Card].self, from: userCards)
+                        let fullName = "\(users[0].name!) \(users[0].lastName!)"
+                        if fullName == owner {
+                            var previousCards: [Card] = []
+                            if let userCards = users[0].cards {
+                                previousCards = try! JSONDecoder().decode([Card].self, from: userCards)
+                            }
+                            let newCard = Card(number: number, owner: owner, expriationDate: expirationDate, securityCode: securityCode)
+                            previousCards.append(newCard)
+                            let cardData = try? JSONEncoder().encode(previousCards)
+                            users[0].cards = Data(cardData!)
+                            try? moc.save()
+                            showingSuccess = true
                         }
-                        let newCard = Card(number: number, owner: owner, expriationDate: expirationDate, securityCode: securityCode)
-                        previousCards.append(newCard)
-                        let cardData = try? JSONEncoder().encode(previousCards)
-                        users[0].cards = Data(cardData!)
-                        try? moc.save()
+                        else {
+                            showingError = true
+                        }
                         number = ""
                         owner = ""
                         expirationDate = ""
                         securityCode = ""
-                        showingAlert = true
-                    }.alert("Card added correctly", isPresented: $showingAlert) {
+                    }.alert("Card added correctly", isPresented: $showingSuccess) {
                         Button("OK", role: .cancel) { }
+                    }
+                    .alert("Card doesn't belong to the current user!", isPresented: $showingError) {
+                            Button("OK", role: .cancel) { }
                     }
                     .padding(.top, 30)
                     Spacer()
