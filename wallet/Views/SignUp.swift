@@ -35,7 +35,7 @@ struct SignUp: View {
                     
                     NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){ EmptyView() }
                     EWButton(buttonText: "Sign Up") {
-                                                    createUser()
+                        createUser()
                         isLoggedIn = true
                         selection = "Home"
                     }

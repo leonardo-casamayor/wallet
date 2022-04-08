@@ -26,8 +26,7 @@ struct TabBar: View {
                     Text("New Card")
                 }
          
-            Text("Video Tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            QRCode(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
                 .tabItem {
                     Image(systemName: "qrcode")
                     Text("QR Code")
