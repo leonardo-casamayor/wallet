@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0514915027FFD7D5005BB907 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0514914F27FFD7D5005BB907 /* AddCard.swift */; };
+		0514915227FFD844005BB907 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0514915127FFD844005BB907 /* Card.swift */; };
 		0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37027FE0B9B005F5746 /* SessionController.swift */; };
 		0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37227FE6FB2005F5746 /* TabBar.swift */; };
 		052FFDF027FBC95A005FEB5B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDEF27FBC95A005FEB5B /* Login.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0514914F27FFD7D5005BB907 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
+		0514915127FFD844005BB907 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0522F37027FE0B9B005F5746 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		0522F37227FE6FB2005F5746 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		052FFDEF27FBC95A005FEB5B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				052FFE0127FC742C005FEB5B /* SignUp.swift */,
 				0522F37227FE6FB2005F5746 /* TabBar.swift */,
 				05A4431827FF6A0700DB53F6 /* Home.swift */,
+				0514914F27FFD7D5005BB907 /* AddCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			children = (
 				05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */,
 				05A4431127FF27C800DB53F6 /* DataController.swift */,
+				0514915127FFD844005BB907 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,11 +228,13 @@
 				0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */,
 				052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */,
 				052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */,
+				0514915227FFD844005BB907 /* Card.swift in Sources */,
 				05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */,
 				05A4431927FF6A0700DB53F6 /* Home.swift in Sources */,
 				05A4431227FF27C800DB53F6 /* DataController.swift in Sources */,
 				052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */,
 				052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */,
+				0514915027FFD7D5005BB907 /* AddCard.swift in Sources */,
 				052FFE0027FBFD20005FEB5B /* EWTextButton.swift in Sources */,
 				05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */,
 				052FFDF827FBDA4A005FEB5B /* Constants.swift in Sources */,

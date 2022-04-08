@@ -3,6 +3,7 @@
 
 ## Release 1.0
 
+[EW-012] - Add card form - https://trello.com/c/T0ngUVto/22-ew-012-add-card-form
 [EW-007] - Load user name on home screen - https://trello.com/c/vdtjTDp3/13-ew-007-load-user-name-on-home-screen
 [EW-008] - Navigate to home - https://trello.com/c/9vEvLmd1/14-ew-008-navigate-to-home
 [EW-011] - Save user in DB on sign up - https://trello.com/c/8mMT3LdC/18-ew-011-save-user-in-db-on-sign-up

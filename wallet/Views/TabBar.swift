@@ -20,8 +20,7 @@ struct TabBar: View {
                     Text("Home")
                 }
          
-            Text("New Card")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            AddCard(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
                 .tabItem {
                     Image(systemName: "creditcard")
                     Text("New Card")
