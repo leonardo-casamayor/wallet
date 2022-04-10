@@ -3,6 +3,7 @@
 
 ## Release 1.0
 
+[EW-020] - Create card scroll view - https://trello.com/c/Aq7fEkbK/33-ew-020-create-card-scroll-view
 [EW-017] - Create qr charge form - https://trello.com/c/wDFnoayH/29-ew-017-create-qr-charge-form
 [EW-014] - Check if card belongs to user - https://trello.com/c/Np0J5GLB/23-ew-014-check-if-card-belongs-to-user
 [EW-013] - Show cards in home - https://trello.com/c/VrynS3oe/26-ew-013-show-cards-in-home
