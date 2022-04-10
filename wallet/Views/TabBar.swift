@@ -32,8 +32,7 @@ struct TabBar: View {
                     Text("QR Code")
                 }
          
-            Text("Profile Tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            NFCPay(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
                 .tabItem {
                     Image(systemName: "wave.3.right")
                     Text("NFC Pay")

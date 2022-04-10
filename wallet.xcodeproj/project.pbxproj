@@ -12,6 +12,7 @@
 		0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37027FE0B9B005F5746 /* SessionController.swift */; };
 		0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37227FE6FB2005F5746 /* TabBar.swift */; };
 		052B1D7A2800993300CC109A /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B1D792800993300CC109A /* QRCode.swift */; };
+		052B1D7C2800B1BB00CC109A /* NFCPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B1D7B2800B1BB00CC109A /* NFCPay.swift */; };
 		052FFDF027FBC95A005FEB5B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDEF27FBC95A005FEB5B /* Login.swift */; };
 		052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDF127FBCA9C005FEB5B /* EWTextField.swift */; };
 		052FFDF427FBD2AE005FEB5B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFDF327FBD2AE005FEB5B /* Theme.swift */; };
@@ -43,6 +44,7 @@
 		0522F37027FE0B9B005F5746 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		0522F37227FE6FB2005F5746 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		052B1D792800993300CC109A /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		052B1D7B2800B1BB00CC109A /* NFCPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPay.swift; sourceTree = "<group>"; };
 		052FFDEF27FBC95A005FEB5B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		052FFDF127FBCA9C005FEB5B /* EWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWTextField.swift; sourceTree = "<group>"; };
 		052FFDF327FBD2AE005FEB5B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				0514914F27FFD7D5005BB907 /* AddCard.swift */,
 				052B1D792800993300CC109A /* QRCode.swift */,
 				0590099D28035C2100830035 /* CardScrollView.swift */,
+				052B1D7B2800B1BB00CC109A /* NFCPay.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */,
 				052FFDFE27FBF3E1005FEB5B /* EWTitle.swift in Sources */,
 				0514915027FFD7D5005BB907 /* AddCard.swift in Sources */,
+				052B1D7C2800B1BB00CC109A /* NFCPay.swift in Sources */,
 				052FFE0027FBFD20005FEB5B /* EWTextButton.swift in Sources */,
 				05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */,
 				052FFDF827FBDA4A005FEB5B /* Constants.swift in Sources */,

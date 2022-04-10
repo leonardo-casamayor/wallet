@@ -15,7 +15,9 @@ struct Home: View {
         VStack {
             EWTitle(title: "Welcome \(users[0].name!)!")
             Text("Count: \(users[0].returnCards().count)")
-            CardScrollView(cards: users[0].returnCards()).padding(.horizontal, 20)
+            ScrollView{
+            CardScrollView(cards: users[0].returnCards(), navigate: false).padding(.horizontal, 20)
+            }
             Spacer()
         }.navigationBarHidden(true)
         

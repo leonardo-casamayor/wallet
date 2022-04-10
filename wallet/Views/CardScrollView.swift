@@ -10,11 +10,15 @@ import SwiftUI
 struct CardScrollView: View {
     var cards: [Card]?
     let cardRatio = 1.7
+    var navigate: Bool = true
+    var amount: String = ""
     var body: some View {
         if let cards = cards {
+            
             GeometryReader { geometry in
                 VStack(spacing: 20){
                         ForEach(0..<cards.count, id: \.self) { i in
+                    NavigationLink(destination: Result(amount: amount, email: "leonardo.casamayor@gmail.com", index: i)) {
                             Tile(card: cards[i])
                                 .foregroundColor(.white)
                                 .padding(.all)
@@ -23,8 +27,9 @@ struct CardScrollView: View {
                                 .frame(width: geometry.size.width, height: geometry.size.width/cardRatio)
                                 .frame(width: geometry
                                         .size.width)
-                        }
+                    }.disabled(!navigate)
                     }
+                }
             }
         }
     }
