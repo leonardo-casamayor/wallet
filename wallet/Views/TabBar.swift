@@ -13,31 +13,31 @@ struct TabBar: View {
     var mail = ""
     var body: some View {
         NavigationView {
-        TabView {
-            Home(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-         
-            AddCard(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
-                .tabItem {
-                    Image(systemName: "creditcard")
-                    Text("New Card")
-                }
-         
-            QRCode(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
-                .tabItem {
-                    Image(systemName: "qrcode")
-                    Text("QR Code")
-                }
-         
-            NFCPay(email: "leonardo.casamayor@gmail.com").environment(\.managedObjectContext, moc)
-                .tabItem {
-                    Image(systemName: "wave.3.right")
-                    Text("NFC Pay")
-                }
-        }
+            TabView {
+                Home(email: mail).environment(\.managedObjectContext, moc)
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                
+                AddCard(email: mail).environment(\.managedObjectContext, moc)
+                    .tabItem {
+                        Image(systemName: "creditcard")
+                        Text("New Card")
+                    }
+                
+                QRCode(email: mail).environment(\.managedObjectContext, moc)
+                    .tabItem {
+                        Image(systemName: "qrcode")
+                        Text("QR Code")
+                    }
+                
+                NFCPay(email: mail).environment(\.managedObjectContext, moc)
+                    .tabItem {
+                        Image(systemName: "wave.3.right")
+                        Text("NFC Pay")
+                    }
+            }
         }.navigationTitle("Tab Bar")
             .navigationBarHidden(true)
     }

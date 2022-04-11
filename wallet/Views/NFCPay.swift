@@ -58,9 +58,9 @@ struct ChooseCard: View {
     var amount: String
     var body: some View {
         VStack {
-//            Text("Input: \(amount), cards: \(users[0].name!)")
             ScrollView {
-                CardScrollView(cards: users[0].returnCards(), amount: amount).padding(.horizontal, 20)
+                CardScrollView(cards: users[0].returnCards(), amount: amount, email: users[0].email!)
+                    .padding(.horizontal, FieldConstants.horizontalSpaceing)
             }
             Spacer()
         }
@@ -79,7 +79,8 @@ struct Result: View {
     var body: some View {
         VStack {
             Text("Payment amount: $\(amount)")
-            CardScrollView(cards: [users[0].returnCards()[index]]).padding(.horizontal, 20)
+            CardScrollView(cards: [users[0].returnCards()[index]], email: users[0].email!)
+                .padding(.horizontal, FieldConstants.horizontalSpaceing)
         }
     }
     init(amount: String, email: String, index: Int) {

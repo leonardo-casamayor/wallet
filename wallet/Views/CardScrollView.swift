@@ -12,13 +12,14 @@ struct CardScrollView: View {
     let cardRatio = 1.7
     var navigate: Bool = true
     var amount: String = ""
+    var email: String = ""
     var body: some View {
         if let cards = cards {
             
             GeometryReader { geometry in
                 VStack(spacing: 20){
-                        ForEach(0..<cards.count, id: \.self) { i in
-                    NavigationLink(destination: Result(amount: amount, email: "leonardo.casamayor@gmail.com", index: i)) {
+                    ForEach(0..<cards.count, id: \.self) { i in
+                        NavigationLink(destination: Result(amount: amount, email: email, index: i)) {
                             Tile(card: cards[i])
                                 .foregroundColor(.white)
                                 .padding(.all)
@@ -27,7 +28,7 @@ struct CardScrollView: View {
                                 .frame(width: geometry.size.width, height: geometry.size.width/cardRatio)
                                 .frame(width: geometry
                                         .size.width)
-                    }.disabled(!navigate)
+                        }.disabled(!navigate)
                     }
                 }
             }
@@ -61,18 +62,5 @@ struct Tile: View {
                 Text(card.expirationDate)
             }.padding(.vertical, 5)
         }
-    }
-}
-extension String {
-    subscript(_ range: CountableRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: max(0, range.lowerBound))
-        let end = index(start, offsetBy: min(self.count - range.lowerBound,
-                                             range.upperBound - range.lowerBound))
-        return String(self[start..<end])
-    }
-
-    subscript(_ range: CountablePartialRangeFrom<Int>) -> String {
-        let start = index(startIndex, offsetBy: max(0, range.lowerBound))
-         return String(self[start...])
     }
 }

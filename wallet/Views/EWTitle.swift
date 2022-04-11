@@ -16,7 +16,7 @@ struct EWTitle: View {
             .foregroundColor(Theme.eldarBlue)
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.system(size: 40, weight: .medium, design: .default))
-            .padding(.horizontal, 20)
+            .padding(.horizontal, FieldConstants.horizontalSpaceing)
     }
 }
 

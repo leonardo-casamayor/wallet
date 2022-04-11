@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0514915027FFD7D5005BB907 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0514914F27FFD7D5005BB907 /* AddCard.swift */; };
 		0514915227FFD844005BB907 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0514915127FFD844005BB907 /* Card.swift */; };
-		0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37027FE0B9B005F5746 /* SessionController.swift */; };
+		0522F37127FE0B9B005F5746 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37027FE0B9B005F5746 /* FirebaseController.swift */; };
 		0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0522F37227FE6FB2005F5746 /* TabBar.swift */; };
 		052B1D7A2800993300CC109A /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B1D792800993300CC109A /* QRCode.swift */; };
 		052B1D7C2800B1BB00CC109A /* NFCPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B1D7B2800B1BB00CC109A /* NFCPay.swift */; };
@@ -25,6 +25,7 @@
 		0590099E28035C2100830035 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590099D28035C2100830035 /* CardScrollView.swift */; };
 		059009A028037B9E00830035 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590099F28037B9E00830035 /* User.swift */; };
 		059009A22803A77E00830035 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059009A12803A77D00830035 /* NetworkController.swift */; };
+		059009A4280405C700830035 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059009A3280405C700830035 /* StringExtensions.swift */; };
 		05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */; };
 		05A4431227FF27C800DB53F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431127FF27C800DB53F6 /* DataController.swift */; };
 		05A4431927FF6A0700DB53F6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431827FF6A0700DB53F6 /* Home.swift */; };
@@ -42,7 +43,7 @@
 /* Begin PBXFileReference section */
 		0514914F27FFD7D5005BB907 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		0514915127FFD844005BB907 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		0522F37027FE0B9B005F5746 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		0522F37027FE0B9B005F5746 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		0522F37227FE6FB2005F5746 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		052B1D792800993300CC109A /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		052B1D7B2800B1BB00CC109A /* NFCPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPay.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		0590099D28035C2100830035 /* CardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
 		0590099F28037B9E00830035 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		059009A12803A77D00830035 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		059009A3280405C700830035 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		05A4430F27FF268800DB53F6 /* wallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wallet.xcdatamodel; sourceTree = "<group>"; };
 		05A4431127FF27C800DB53F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		05A4431827FF6A0700DB53F6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		059009A528040A7B00830035 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0522F37027FE0B9B005F5746 /* FirebaseController.swift */,
+				059009A12803A77D00830035 /* NetworkController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		05A4431727FF4ADF00DB53F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,11 +150,11 @@
 				05E20C0227FB57D100530224 /* Assets.xcassets */,
 				05E20C0427FB57D100530224 /* Preview Content */,
 				0522F36F27FE0A9D005F5746 /* Views */,
+				059009A528040A7B00830035 /* Controllers */,
+				05A4431727FF4ADF00DB53F6 /* Model */,
 				052FFDF327FBD2AE005FEB5B /* Theme.swift */,
 				052FFDF727FBDA4A005FEB5B /* Constants.swift */,
-				0522F37027FE0B9B005F5746 /* SessionController.swift */,
-				05A4431727FF4ADF00DB53F6 /* Model */,
-				059009A12803A77D00830035 /* NetworkController.swift */,
+				059009A3280405C700830035 /* StringExtensions.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -240,7 +251,7 @@
 				059009A22803A77E00830035 /* NetworkController.swift in Sources */,
 				0590099E28035C2100830035 /* CardScrollView.swift in Sources */,
 				052FFDF627FBD6B5005FEB5B /* EWSecureField.swift in Sources */,
-				0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */,
+				0522F37127FE0B9B005F5746 /* FirebaseController.swift in Sources */,
 				052FFDF027FBC95A005FEB5B /* Login.swift in Sources */,
 				0522F37327FE6FB2005F5746 /* TabBar.swift in Sources */,
 				052FFDFC27FBE5B1005FEB5B /* EWButton.swift in Sources */,
@@ -249,6 +260,7 @@
 				059009A028037B9E00830035 /* User.swift in Sources */,
 				0514915227FFD844005BB907 /* Card.swift in Sources */,
 				05E20BFF27FB57CD00530224 /* walletApp.swift in Sources */,
+				059009A4280405C700830035 /* StringExtensions.swift in Sources */,
 				05A4431927FF6A0700DB53F6 /* Home.swift in Sources */,
 				05A4431227FF27C800DB53F6 /* DataController.swift in Sources */,
 				052FFDF227FBCA9C005FEB5B /* EWTextField.swift in Sources */,

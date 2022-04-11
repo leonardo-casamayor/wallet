@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Login: View {
     
-    var sessionController = firebaseController()
+    var sessionController = SessionController()
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
@@ -28,9 +28,8 @@ struct Login: View {
                     .frame(width: 250, height: 250, alignment: .center)
                 
                 VStack() {
-                    Text("Count: \(users.count)")
                     EWTextField(text: $email, placeholder: "Email")
-                    EWTextField(text: $pass, placeholder: "Password").padding(.top, 10)
+                    EWSecureField(text: $pass).padding(.top, 10)
                     
                     NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){
                         EWButton(buttonText: "Log In") {
@@ -63,10 +62,9 @@ struct Login_Previews: PreviewProvider {
 extension Login {
     
     func signIn(){
-        sessionController.signIn(withEmail: "leonardo.casamayor@gmail.com", andPassword: "Helloooo") { result, error in
+        sessionController.signIn(withEmail: email, andPassword: pass) { result, error in
             if let result = result, error == nil {
                 print("Firebase login succesful for user with mail: \(result.user.email!)")
-                //go to home and send mail to it
                 selection = "Home"
             }
             else {

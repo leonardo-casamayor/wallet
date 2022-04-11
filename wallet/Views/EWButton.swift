@@ -25,7 +25,7 @@ struct EWButton: View {
         .padding(.all)
         .background(Theme.eldarBlue)
         .cornerRadius(8)
-        .padding(.horizontal, 20)
+        .padding(.horizontal, FieldConstants.horizontalSpaceing)
     }
 }
 

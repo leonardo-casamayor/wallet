@@ -14,9 +14,9 @@ struct Home: View {
     var body: some View {
         VStack {
             EWTitle(title: "Welcome \(users[0].name!)!")
-            Text("Count: \(users[0].returnCards().count)")
             ScrollView{
-            CardScrollView(cards: users[0].returnCards(), navigate: false).padding(.horizontal, 20)
+                CardScrollView(cards: users[0].returnCards(), navigate: false, email: users[0].email!)
+                    .padding(.horizontal, FieldConstants.horizontalSpaceing)
             }
             Spacer()
         }.navigationBarHidden(true)
@@ -24,15 +24,5 @@ struct Home: View {
     }
     init(email: String) {
         _users = FetchRequest<User>(sortDescriptors: [], predicate: NSPredicate(format: "email == %@", email))
-    }
-}
-
-extension Home {
-    func decodeCards() -> [Card] {
-        var previousCards: [Card] = []
-        if let userCards = users[0].cards {
-            previousCards = try! JSONDecoder().decode([Card].self, from: userCards)
-        }
-        return previousCards
     }
 }

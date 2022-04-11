@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct SignUp: View {
     
-    var sessionController = firebaseController()
+    var sessionController = SessionController()
     @Environment(\.managedObjectContext) var moc
     @State private var selection: String? = nil
     @State var name: String = ""
@@ -31,7 +31,7 @@ struct SignUp: View {
                     EWTextField(text: $name, placeholder: "Name").padding(.bottom, 10)
                     EWTextField(text: $lastName, placeholder: "Last Name").padding(.bottom, 10)
                     EWTextField(text: $email, placeholder: "Email").padding(.bottom, 10)
-                    EWTextField(text: $pass, placeholder: "Password").padding(.bottom, 10)
+                    EWSecureField(text: $pass).padding(.bottom, 10)
                     
                     NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){ EmptyView() }
                     EWButton(buttonText: "Sign Up") {

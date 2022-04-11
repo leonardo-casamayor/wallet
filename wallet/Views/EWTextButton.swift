@@ -22,7 +22,7 @@ struct EWTextButton: View {
         .frame(minWidth: 0, maxWidth: .infinity)
         .foregroundColor(.gray)
         .background(.clear)
-        .padding(.horizontal, 20)
+        .padding(.horizontal, FieldConstants.horizontalSpaceing)
     }
 }
 

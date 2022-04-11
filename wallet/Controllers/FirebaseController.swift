@@ -8,13 +8,13 @@
 import Foundation
 import FirebaseAuth
 
-protocol SessionController {
+protocol FirebaseController {
     func createUser(withEmail email: String, andPassword pass: String, completion: @escaping ((AuthDataResult?, Error?) -> Void))
     func signIn(withEmail email: String, andPassword pass: String, completion: @escaping ((AuthDataResult?, Error?) -> Void))
     func logOut()
 }
 
-class firebaseController: SessionController {
+class SessionController: FirebaseController {
     
     func createUser(withEmail email: String, andPassword pass: String, completion: @escaping ((AuthDataResult?, Error?) -> Void)) {
         Auth.auth().createUser(withEmail: email, password: pass, completion: completion)

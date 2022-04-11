@@ -22,20 +22,12 @@ struct QRCode: View {
         NavigationView {
             
             VStack(spacing: 100) {
-               EWTitle(title: "Generate QR Code")
+                EWTitle(title: "Generate QR Code")
                 VStack() {
                     EWTextField(text: $amount, placeholder: "Amount").padding(.bottom, 10)
                     NavigationLink(destination: QRResult(amount: amount, email: users[0].email!, image: image), tag: "QRResult", selection: $selection){ EmptyView() }
                     EWButton(buttonText: "Generate") {
-                        networkController.requestQRCode(content: "") { result in
-                            switch result {
-                            case .success(let qrCode):
-                                self.image = qrCode
-                                selection = "QRResult"
-                            case .failure(_):
-                                print("error")
-                            }
-                        }
+                        requestQRCode()
                     }
                     .padding(.top, 30)
                     Spacer()
@@ -49,8 +41,21 @@ struct QRCode: View {
     init(email: String) {
         _users = FetchRequest<User>(sortDescriptors: [], predicate: NSPredicate(format: "email == %@", email))
     }
-    }
+}
 
+extension QRCode {
+    func requestQRCode() {
+        networkController.requestQRCode(content: "") { result in
+            switch result {
+            case .success(let qrCode):
+                self.image = qrCode
+                selection = "QRResult"
+            case .failure(_):
+                print("error")
+            }
+        }
+    }
+}
 
 //struct QRCode_Previews: PreviewProvider {
 //    static var previews: some View {
