@@ -90,18 +90,18 @@
 			isa = PBXGroup;
 			children = (
 				052FFDEF27FBC95A005FEB5B /* Login.swift */,
-				052FFDF127FBCA9C005FEB5B /* EWTextField.swift */,
-				052FFDF527FBD6B5005FEB5B /* EWSecureField.swift */,
-				052FFDFB27FBE5B1005FEB5B /* EWButton.swift */,
-				052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */,
-				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
 				052FFE0127FC742C005FEB5B /* SignUp.swift */,
 				0522F37227FE6FB2005F5746 /* TabBar.swift */,
 				05A4431827FF6A0700DB53F6 /* Home.swift */,
 				0514914F27FFD7D5005BB907 /* AddCard.swift */,
 				052B1D792800993300CC109A /* QRCode.swift */,
-				0590099D28035C2100830035 /* CardScrollView.swift */,
 				052B1D7B2800B1BB00CC109A /* NFCPay.swift */,
+				0590099D28035C2100830035 /* CardScrollView.swift */,
+				052FFDF127FBCA9C005FEB5B /* EWTextField.swift */,
+				052FFDF527FBD6B5005FEB5B /* EWSecureField.swift */,
+				052FFDFB27FBE5B1005FEB5B /* EWButton.swift */,
+				052FFDFD27FBF3E1005FEB5B /* EWTitle.swift */,
+				052FFDFF27FBFD20005FEB5B /* EWTextButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

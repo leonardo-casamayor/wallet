@@ -31,6 +31,9 @@ struct SignUp: View {
                     EWTextField(text: $name, placeholder: "Name").padding(.bottom, 10)
                     EWTextField(text: $lastName, placeholder: "Last Name").padding(.bottom, 10)
                     EWTextField(text: $email, placeholder: "Email").padding(.bottom, 10)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     EWSecureField(text: $pass).padding(.bottom, 10)
                     
                     NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){ EmptyView() }

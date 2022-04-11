@@ -29,6 +29,9 @@ struct Login: View {
                 
                 VStack() {
                     EWTextField(text: $email, placeholder: "Email")
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     EWSecureField(text: $pass).padding(.top, 10)
                     
                     NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){
