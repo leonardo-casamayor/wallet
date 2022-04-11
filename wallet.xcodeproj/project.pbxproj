@@ -24,6 +24,7 @@
 		052FFE0227FC742C005FEB5B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FFE0127FC742C005FEB5B /* SignUp.swift */; };
 		0590099E28035C2100830035 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590099D28035C2100830035 /* CardScrollView.swift */; };
 		059009A028037B9E00830035 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590099F28037B9E00830035 /* User.swift */; };
+		059009A22803A77E00830035 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059009A12803A77D00830035 /* NetworkController.swift */; };
 		05A4431027FF268800DB53F6 /* wallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05A4430E27FF268800DB53F6 /* wallet.xcdatamodeld */; };
 		05A4431227FF27C800DB53F6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431127FF27C800DB53F6 /* DataController.swift */; };
 		05A4431927FF6A0700DB53F6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4431827FF6A0700DB53F6 /* Home.swift */; };
@@ -56,6 +57,7 @@
 		052FFE0127FC742C005FEB5B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		0590099D28035C2100830035 /* CardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
 		0590099F28037B9E00830035 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		059009A12803A77D00830035 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		05A4430F27FF268800DB53F6 /* wallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wallet.xcdatamodel; sourceTree = "<group>"; };
 		05A4431127FF27C800DB53F6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		05A4431827FF6A0700DB53F6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				052FFDF727FBDA4A005FEB5B /* Constants.swift */,
 				0522F37027FE0B9B005F5746 /* SessionController.swift */,
 				05A4431727FF4ADF00DB53F6 /* Model */,
+				059009A12803A77D00830035 /* NetworkController.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059009A22803A77E00830035 /* NetworkController.swift in Sources */,
 				0590099E28035C2100830035 /* CardScrollView.swift in Sources */,
 				052FFDF627FBD6B5005FEB5B /* EWSecureField.swift in Sources */,
 				0522F37127FE0B9B005F5746 /* SessionController.swift in Sources */,
