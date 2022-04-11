@@ -3,6 +3,7 @@
 
 ## Release 1.0
 
+[EW-015] - Encrypt card data - https://trello.com/c/o1ltffKc/24-ew-015-encrypt-card-data
 [EW-018] - Qr api call - https://trello.com/c/KBcsBxK5/31-ew-018-qr-api-call
 [WE-019] - Create NFC form - https://trello.com/c/lZHU2WNX/32-we-019-create-nfc-form
 [EW-020] - Create card scroll view - https://trello.com/c/Aq7fEkbK/33-ew-020-create-card-scroll-view

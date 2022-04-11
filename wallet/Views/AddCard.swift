@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CryptoKit
 
 struct AddCard: View {
    
@@ -28,19 +29,18 @@ struct AddCard: View {
                     EWTextField(text: $owner, placeholder: "Owner").padding(.bottom, 10)
                     EWTextField(text: $expirationDate, placeholder: "Expiration Date").padding(.bottom, 10)
                     EWTextField(text: $securityCode, placeholder: "Security Code").padding(.bottom, 10)
-                    
-//                    NavigationLink(destination: TabBar(mail: email).environment(\.managedObjectContext, moc), tag: "Home", selection: $selection){ EmptyView() }
                     EWButton(buttonText: "Add Card +") {
                         let fullName = "\(users[0].name!) \(users[0].lastName!)"
                         if fullName == owner {
-                            var previousCards: [Card] = []
-                            if let userCards = users[0].cards {
-                                previousCards = try! JSONDecoder().decode([Card].self, from: userCards)
-                            }
+                            var previousCards: [Card] = users[0].returnCards()
+//                            if let userCards = users[0].cards {
+//                                previousCards = try! JSONDecoder().decode([Card].self, from: userCards)
+//                            }
                             let newCard = Card(number: number, owner: owner, expriationDate: expirationDate, securityCode: securityCode)
                             previousCards.append(newCard)
                             let cardData = try? JSONEncoder().encode(previousCards)
-                            users[0].cards = Data(cardData!)
+                            let encryptedCardData = try! AES.GCM.seal(cardData!,using: SymmetricKey(data: users[0].key!)).combined!
+                            users[0].cards = Data(encryptedCardData)
                             try? moc.save()
                             showingSuccess = true
                         }

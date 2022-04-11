@@ -76,6 +76,7 @@ extension SignUp {
     func createDBUser() {
         let user = User(context: moc)
         user.id = UUID()
+        user.key = Data(ContiguousArray(repeating: UInt8(Int.random(in: 1..<64)), count: 32))
         user.email = self.email
         user.name = self.name
         user.lastName = self.lastName

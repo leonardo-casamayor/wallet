@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import CryptoKit
 
 extension User {
     func returnCards() -> [Card] {
-        var previousCards: [Card] = []
-        if let userCards = self.cards {
-            previousCards = try! JSONDecoder().decode([Card].self, from: userCards)
+        var cards: [Card] = []
+        if let encryptedCards = self.cards, let keyData = self.key {
+            let key = SymmetricKey(data: keyData)
+            let sealBox = try! AES.GCM.SealedBox(combined: encryptedCards)
+            let decryptedCards = try! AES.GCM.open(sealBox, using: key)
+            cards = try! JSONDecoder().decode([Card].self, from: decryptedCards)
         }
-        return previousCards
+        return cards
     }
 }
